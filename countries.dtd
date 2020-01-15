@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE countries [
+    <!ENTITY canada SYSTEM "data/Canada.xml">
+    <!ENTITY armenia SYSTEM "data/Armenia.xml">
+    <!ENTITY iceland SYSTEM "data/Iceland.xml">
+    <!ENTITY madagascar SYSTEM "data/Madagascar.xml">
+]>
+
+<countries>
+    &canada;
+    &armenia;
+    &iceland;
+    &madagascar;
+</countries>
