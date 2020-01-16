@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<start>
+		<element name="countries">
+			<oneOrMore>
+				<element name="country">
+					<attribute name="name"/>
+					<oneOrMore>
+						<element name="section">
+							<attribute name="name"/>
+							<oneOrMore>
+								<element name="text">
+									<attribute name="name"/>
+									<element name="data">
+										<optional>
+											<text/>
+										</optional>
+										<zeroOrMore>
+											<element name="subdata">
+												<text/>
+											</element>
+										</zeroOrMore>
+									</element>
+								</element>
+							</oneOrMore>
+						</element>
+					</oneOrMore>
+				</element>
+			</oneOrMore>
+		</element>
+	</start>
+</grammar>

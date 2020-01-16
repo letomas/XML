@@ -1,0 +1,17 @@
+start = element countries { 
+	element country {
+		attribute name { xsd:token },
+		element section {
+			attribute name { xsd:token },
+			element \text {
+				attribute name { xsd:token },
+				element data {
+					text?,
+					element subdata {
+						text
+					}*
+				}
+			}+
+		}+
+	}+
+}
