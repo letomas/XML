@@ -7,37 +7,27 @@
 				<meta charset="utf-8"/>
 				<meta name="viewport" content="width=device-width, initial-scale=1"/>	
                 <link rel="stylesheet" href="styles.css"/>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
             </head>
             <body>
                 <header>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="armenia.html">Armenia</a>
-                            </li>
-                            <li>
-                                <a href="canada.html">Canada</a>
-                            </li>
-                            <li>
-                                <a href="iceland.html">Iceland</a>
-                            </li>
-                            <li>
-                                <a href="madagascar.html">Madagascar</a>
-                            </li>
+                    <nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
+                        <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="canada.html">Canada</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="armenia.html">Armenia</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="iceland.html">Iceland</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="madagascar.html">Madagascar</a></li>
                         </ul>
                     </nav>
                 </header>
 
                 <main>
-                    <xsl:apply-templates mode="content"></xsl:apply-templates>
+                    <div class="container">
+                        <xsl:apply-templates mode="content"></xsl:apply-templates>
+                    </div>
                 </main>
 
-                <footer>
-                    <p>BI-XML Semestrální práce 2019/2020, Tomáš Le</p>
-                </footer>
             </body>
         </html>
 
@@ -51,10 +41,10 @@
 
 
     <xsl:template match="//country" mode="content">
-        <h1>
+        <h1 class="card-header">
             <xsl:value-of select="@name" />
         </h1>
-        <img class="flag">
+        <img>
             <xsl:attribute name="src">
                 <xsl:value-of select="concat('../data/img/', @name, '-flag.gif')" />
             </xsl:attribute>
@@ -62,7 +52,7 @@
                 <xsl:value-of select="concat('Flag of ', @name)" />
             </xsl:attribute>
         </img>
-        <img class="map">
+        <img>
             <xsl:attribute name="src">
                 <xsl:value-of select="concat('../data/img/', @name, '-map.gif')" />
             </xsl:attribute>
@@ -70,7 +60,7 @@
                 <xsl:value-of select="concat('Map of ', @name)" />
             </xsl:attribute>
         </img>
-        <img class="locator">
+        <img>
             <xsl:attribute name="src">
                 <xsl:value-of select="concat('../data/img/', @name, '-locator-map.gif')" />
             </xsl:attribute>
@@ -78,8 +68,8 @@
                 <xsl:value-of select="concat('Locator map of ', @name)" />
             </xsl:attribute>
         </img>
-        <p class="navigation-title">Navigation</p>
-        <ul class="navigation">
+        <h2 class="navigation-title">Navigation</h2>
+        <ul class="list-unstyled">
             <xsl:for-each select="section">
                 <li>
                     <a>
@@ -96,7 +86,7 @@
 
     <xsl:template match="section">
         <article>
-            <h2 class="section-title">
+            <h2 class="card-header">
                 <xsl:attribute name="id">
                     <xsl:value-of select="@name" />
                 </xsl:attribute>
