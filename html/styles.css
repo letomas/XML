@@ -1,0 +1,45 @@
+h1 {
+	font-size: 3em !important;
+	text-align: center;
+}
+
+h2.card-header{
+	margin-top: 2em;
+	margin-bottom: 0.4em;
+}
+
+section{
+	margin-left: 1.3em;
+}
+
+img{
+	width: 250px;
+	padding: 5px;
+}
+nav{
+	margin-bottom: 30px !important;
+}
+
+h2, h3, li{
+	text-transform: capitalize;
+}
+
+footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	background-color: #efefef;
+	text-align: center;
+}
+
+.list-unstyled{
+	margin-bottom: 3em;
+}
+
+.list-unstyled li {
+	margin-bottom: 0.2em;
+	margin-left: 0.5em;
+	font-size: 1.1em;
+}
