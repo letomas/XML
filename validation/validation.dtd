@@ -2,7 +2,7 @@
 
 <!ELEMENT countries (country+)>
 <!ELEMENT country (#PCDATA|section)*>
-<!ATTLIST country name CDATA #IMPLIED>
+<!ATTLIST country name CDATA #REQUIRED>
 
 <!ELEMENT section (text*)>
 <!ATTLIST section name CDATA #REQUIRED>
