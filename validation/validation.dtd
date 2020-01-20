@@ -1,7 +1,5 @@
 <?xml encoding="UTF-8"?>
 
-<!ELEMENT project (meta, countries)>
-
 <!ELEMENT countries (country+)>
 <!ELEMENT country (#PCDATA|section)*>
 <!ATTLIST country name CDATA #IMPLIED>
